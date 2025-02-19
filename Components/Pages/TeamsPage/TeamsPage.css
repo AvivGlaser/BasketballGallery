@@ -1,0 +1,11 @@
+.teams-page {
+}
+
+.teams-wrapper.grid-view {
+  /* display: flex; */
+}
+.grid-view .projcard-container {
+  /* display: inline-flex; */
+}
+.teams-wrapper.card-view {
+}

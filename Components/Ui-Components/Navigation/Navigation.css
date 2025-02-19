@@ -1,0 +1,9 @@
+nav {
+    margin: 1%;
+}
+nav > a {
+    margin: 1%;
+    text-decoration: underline;
+    padding: 0.2rem;
+    color: black;
+}

@@ -1,0 +1,36 @@
+/* @import url("../src/Assets/Agave-Regular-slashed.ttf"); */
+* {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  align-items: center;
+}
+
+.theme-button {
+  margin: 1% !important ;
+  width: 8rem !important;
+}
+
+#root {
+  min-height: calc(100vh - 34px);
+  text-align: center !important;
+}
+
+.light  {
+  background-color: white;
+  color: #1B1212	;
+}
+
+.dark {
+  background-color: #1B1212	;
+  color: white;
+}

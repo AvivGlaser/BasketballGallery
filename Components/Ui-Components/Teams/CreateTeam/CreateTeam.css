@@ -1,0 +1,266 @@
+
+
+.grid-view .projcard-container {
+  margin: 2% 0;
+}
+
+.grid-view .projcard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 55rem;
+}
+.grid-view .projcard {
+  padding: 0.5rem;
+  color: black;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  margin-bottom: 3rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  border: 0.1rem solid black;
+  font-size: large;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.grid-view .projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+  transform: translate(0px, -3px);
+}
+.grid-view .projcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 0.07;
+}
+
+.grid-view .projcard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.grid-view .projcard-img {
+  position: absolute;
+  height: 20rem;
+  width: 25rem;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+.grid-view .projcard:nth-child(2n) .projcard-img {
+  left: initial;
+  right: 0;
+}
+.grid-view .projcard:hover .projcard-img {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.grid-view .projcard-textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 1rem;
+}
+.grid-view .projcard:nth-child(2n) .projcard-textbox {
+  left: initial;
+  right: 430px;
+}
+.grid-view .projcard-textbox::before,
+.grid-view .projcard-textbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ff0000bb;
+  background: #fff;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+}
+.grid-view .projcard:nth-child(2n) .projcard-textbox::before {
+  display: none;
+}
+.grid-view .projcard-textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+}
+.grid-view .projcard:nth-child(2n) .projcard-textbox::after {
+  display: block;
+}
+.grid-view .projcard-textbox * {
+  position: relative;
+}
+.voces-regular {
+  font-family: "Voces", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.grid-view .projcard-title {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  font-size: 24px;
+}
+.grid-view .projcard-subtitle {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  color: #888;
+}
+.grid-view .projcard-bar {
+  width: 50px;
+  height: 0.2rem;
+  margin: 10px 0;
+  border-radius: 1rem;
+  background-color: #1c4f9b;
+  transition: width 0.2s ease;
+}
+
+.grid-view .projcard:hover .projcard-bar {
+  opacity: 0.7;
+  width: 70px;
+}
+
+.grid-view .projcard-customcolor .projcard-bar {
+  background-color: var(--projcard-color);
+}
+.grid-view .projcard-customcolor::before {
+  background-image: linear-gradient(
+    -70deg,
+    var(--projcard-color),
+    transparent 50%
+  );
+}
+.grid-view .projcard-customcolor:nth-child(2n)::before {
+  background-image: linear-gradient(
+    -250deg,
+    var(--projcard-color),
+    transparent 50%
+  );
+}
+.grid-view .projcard-description {
+  z-index: 10;
+  font-size: 15px;
+  color: #424242;
+  height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.grid-view .projcard-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  user-select: none;
+}
+.grid-view .projcard-tag {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #bb92bc;
+  border-radius: 3px 0 0 3px;
+  line-height: 2rem;
+  padding: 0.5rem 0.7rem 0.2rem 1rem;
+  position: relative;
+  margin-right: 1rem;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: color 0.2s;
+}
+.grid-view .projcard-tag::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+}
+.grid-view .projcard-tag::after {
+  content: "";
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #e0e0e0;
+  border-top: 13px solid transparent;
+  right: -10px;
+  top: 0;
+}
+
+.card-view .projcard-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(180px, 1fr)
+  ); /* Responsive grid */
+  gap: 16px; /* Spacing between cards */
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-view .projcard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-view .projcard:hover {
+  transform: scale(1.05);
+}
+
+.card-view .projcard-innerbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projcard-img {
+  width: 100%;
+  height: 120px; /* Adjust as needed */
+  object-fit: cover; /* Prevent stretching */
+  border-radius: 8px;
+}
+
+.card-view .projcard-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card-view .projcard-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-view .projcard-tagbox {
+  margin-top: 5px;
+}
+
+.card-view .projcard-tag {
+  display: inline-block;
+  background: #ffcc00;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .projcard-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}

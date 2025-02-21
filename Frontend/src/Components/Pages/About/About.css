@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+}
+.timeline:before {
+  background-color: black;
+  content: "";
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
+}
+
+.timeline-event {
+  list-style: none;
+  position: relative;
+}
+.timeline-event:hover .timeline-event-icon {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #4984c6;
+}
+.timeline-event:hover .timeline-event-thumbnail {
+  -moz-box-shadow: inset 40em 0 0 0 #4984c6;
+  -webkit-box-shadow: inset 40em 0 0 0 #4984c6;
+  box-shadow: inset 40em 0 0 0 #4984c6;
+}
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+}
+.timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+.timeline-event-copy h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+.timeline-event-copy strong {
+  font-weight: 700;
+}
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 10px solid white;
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-event-thumbnail {
+  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+  -o-transition: box-shadow 0.5s ease-in 0.1s;
+  -webkit-transition: box-shadow 0.5s ease-in;
+  /* -webkit-transition-delay: 0.1s; */
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
+  font-size: 0.75em;
+  background-color: black;
+  -moz-box-shadow: inset 0 0 0 0em #1c4472;
+  -webkit-box-shadow: inset 0 0 0 0em #1c4472;
+  box-shadow: inset 0 0 0 0em #1c4472;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+.timeline-image:hover {
+  transform: scale(1.05);
+}
+.timeline-image {
+  transition: transform 0.2s ease-out;
+}
+
+.timeline-image {
+  border: 0.1rem solid black;
+  width: 8rem;
+  opacity: 0;
+  transform: rotateY(0deg) scale(1.25);
+  animation: fadeInScale 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.timeline-event {
+  list-style: none;
+  position: relative;
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: slideUpFade 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+}
+
+.timeline:before {
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 0.1rem;
+  height: 100%;
+}
+
+.timeline-event-icon {
+  transition: transform 0.2s ease-in;
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 0.625rem solid white;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-event-thumbnail {
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
+  font-size: 0.75em;
+  background-color: black;
+  box-shadow: inset 0 0 0 0em #1c4472;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}

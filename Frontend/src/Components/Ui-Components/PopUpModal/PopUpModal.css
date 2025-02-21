@@ -1,0 +1,24 @@
+.pop-up-modal {
+  text-align: center;
+  margin: auto;
+  /* width: 60%; */
+  border-radius: 5%;
+}
+
+.pop-up-content {
+  overflow-y: unset !important;
+}
+
+.pop-up-btn {
+  justify-content: center !important;
+  margin: 1.5%;
+}
+.MuiDialog-paperScrollPaper {
+  padding: 1;
+  border-radius: 3% !important;
+  border: 0.15rem solid #3c3d40 !important;
+}
+
+.pop-up-description {
+  margin: 1.5%;
+}

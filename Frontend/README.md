@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Basketball Teams Showcase
 
 This is a small project designed to showcase basketball teams using **React 19**, **TypeScript**, **MongoDB**, and **Next.js**. The purpose of this project is to explore and experiment with the latest additions and best practices in React development.

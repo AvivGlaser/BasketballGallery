@@ -11,19 +11,23 @@ Follow these steps to run the project on your local machine:
 
 ### 1. Clone repo
 
-    "git clone https://github.com/AvivGlaser/BasketballGallery.git"
+    git clone https://github.com/AvivGlaser/BasketballGallery.git
 
 ### 2. Install dependencies
 
-    "npm i" / "yarn i" from root project folder
+    npm i
 
 ### 3. Build the Project for Development
 
-    "npm run build / yarn run build"
+    npm run build
 
-### 4. Run app
+### 4. Install serve
 
-    serve -s build
+    npm install -g serve
+
+### 5. Run project
+
+     serve -s build
 
 ## Purpose
 

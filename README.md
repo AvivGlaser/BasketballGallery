@@ -2,7 +2,7 @@
 # Basketball Teams Showcase
 This is a small project designed to showcase basketball teams using **React 19**, **TypeScript**, **MongoDB**, and **Next.js**.
 ## Running
-Unfortunately this project does not have an online demo is it is still under progress,
+Unfortunately this project does not have an online demo as it is still under progress,
 Follow these steps to run the project on your local machine:
 
 ### 1. Clone repo

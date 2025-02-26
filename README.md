@@ -11,7 +11,7 @@ Follow these steps to run the project on your local machine:
 
 ### 1. Clone repo
 
-    "git clonse https://github.com/AvivGlaser/BasketballGallery.git"
+    "git clone https://github.com/AvivGlaser/BasketballGallery.git"
 
 ### 2. Install dependencies
 

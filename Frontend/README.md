@@ -1,24 +1,33 @@
-
+=======
 # Basketball Teams Showcase
+This is a small project designed to showcase basketball teams using **React 19**, **TypeScript**, **MongoDB**, and **Next.js**.
+## Running
+Unfortunately this project does not have an online demo is it is still under progress,
+Follow these steps to run the project on your local machine:
 
-This is a small project designed to showcase basketball teams using **React 19**, **TypeScript**, **MongoDB**, and **Next.js**. The purpose of this project is to explore and experiment with the latest additions and best practices in React development.
+### 1. Clone repo
+"git clone https://github.com/yourusername/your-repository.git"
+### 2. Install dependencies
+    "npm i" / "yarn i" from root project folder
+### 3. Build the Project for Development
+    "npm run build / yarn run build"
+### 4. Run app
+    serve -s build
 
 ## Purpose
+The purpose of this project is to experiment with advanced React techniques and modern web practices I haven't used before, including:
 
-The project serves as a playground for:
-- Trying out the newest features in React, such as the **useQuery** hook and **AbortController**.
-- Implementing modern practices and patterns in React applications.
-- Working with a backend using **MongoDB** to fetch and display data.
-- Exploring how **Next.js** can be used for server-side rendering (SSR) and API routes.
+useQuery for efficient data fetching and AbortController for request management.
+React Suspense, lazy loading, and Custom Hooks for better state management and performance.
+Connecting to MongoDB and using Next.js for SSR and API routes.
+Applying memoization techniques and exploring React’s new JSX Transform.
 
 ## Tech Stack
+
 - **React 19**: The latest version of React to try new features and optimize development.
 - **TypeScript**: Adding type safety and enhancing code quality.
 - **MongoDB**: NoSQL database to store and manage basketball teams data.
 - **Next.js**: A React framework for server-side rendering, static site generation, and API routes.
 
-
 =======
-# BasketballGallery
-Sandbox project for react modern best practices 
->>>>>>> b7f3c612badb3dc17adc1f0b96d2b2450a44c5c4
+

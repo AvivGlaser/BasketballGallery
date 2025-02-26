@@ -22,6 +22,7 @@ export default function CreateTeam(props: ICreateTeam) {
                 <div className="projcard-innerbox">
                   <TeamsActionBtn />
                   <img
+                    loading="lazy"
                     className="projcard-img"
                     src={t.img || defaultImg}
                     alt={t.alt || "Team logo image"}
@@ -57,7 +58,7 @@ export default function CreateTeam(props: ICreateTeam) {
             );
           })
         : (teams as IAPITeams[]).map((t) => {
-            if (!t.city) return;
+            if (!t.city) return null;
             const APIteamImage: string = `https://loodibee.com/wp-content/uploads/nba-${t.city.toLowerCase()}-${t.name.toLowerCase()}-logo-300x300.png`;
 
             return (
@@ -65,6 +66,7 @@ export default function CreateTeam(props: ICreateTeam) {
                 <TeamsActionBtn />
                 <div className="projcard-innerbox">
                   <img
+                    loading="lazy"
                     className="projcard-img"
                     src={APIteamImage}
                     alt={`${t.name}  Logo `}
@@ -72,7 +74,8 @@ export default function CreateTeam(props: ICreateTeam) {
                       const target = e.currentTarget;
                       if (target.src !== defaultImg) {
                         target.src = defaultImg;
-                    }}}
+                      }
+                    }}
                   />
                   <div className="projcard-textbox">
                     <div className="projcard-title">{t.name}</div>

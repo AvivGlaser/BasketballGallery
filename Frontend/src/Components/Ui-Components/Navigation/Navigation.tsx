@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Route, Link, Routes } from "react-router-dom";
 import routesData from "./RoutesData";
 import { IRoute } from "../../../Helpers/Interfaces";
 import { nanoid } from "@reduxjs/toolkit";
 import "./Navigation.css";
 import Time from "../Time/Time";
+import Loader from "../Loader/Loader";
+
 export default function Navigation() {
   return (
     <nav>
@@ -20,16 +22,18 @@ export default function Navigation() {
             {route.linkText}
           </Link>
         ))}
-      <Routes>
-        {routesData.map((route: IRoute) => (
-          <Route
-            key={route.id}
-            path={route.path}
-            element={<route.element />}
-            id={nanoid()}
-          />
-        ))}
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          {routesData.map((route: IRoute) => (
+            <Route
+              key={route.id}
+              path={route.path}
+              element={<route.element />}
+              id={nanoid()}
+            />
+          ))}
+        </Routes>
+      </Suspense>
     </nav>
   );
 }

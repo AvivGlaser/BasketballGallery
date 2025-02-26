@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ITeams } from "../../../Helpers/Interfaces";
 import "./TeamsPage.css";
 import TeamsView from "../../Ui-Components/Teams/TeamsView/TeamsView";
@@ -9,7 +9,6 @@ import CreateTeam from "../../Ui-Components/Teams/CreateTeam/CreateTeam";
 import { GetTeams } from "../../Ui-Components/Teams/GetTeams/GetTeams";
 import Loader from "../../Ui-Components/Loader/Loader";
 import PopUpModal from "../../Ui-Components/PopUpModal/PopUpModal";
-import teamsDataLocalObject from "./TeamsData";
 
 export default function TeamsPage() {
   const initialViewState: string = "grid-view";

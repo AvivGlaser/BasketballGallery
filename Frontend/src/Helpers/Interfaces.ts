@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 export interface IRoute {
   id: string;
   path: string;
-  element: React.ElementType;
+  element: React.ElementType | any;
   linkText: string;
   invisible?: boolean;
 }
